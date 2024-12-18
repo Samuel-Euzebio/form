@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  
+  <div class="form-container">
+
+    <h1 class="form-tittle">Contact Us</h1>
+
+    <form id="form" novalidate>    
+      <div class="name-container">
+        <div class="name" id="name">
+          <label for="first-name">First Name <span>*</span></label>
+          <input style="display: block" id="first-name" type="text" name="first-name" required />
+          <span class="error-message" id="first-name-error"></span>
+        </div>
+
+        <div class="name">
+          <label for="last-name">Last Name <span>*</span></label>
+          <input style="display: block" id="last-name" type="text" name="last-name" required /> 
+          <span class="error-message" id="last-name-error"></span>
+        </div>
+
+      </div>
+      
+      <label for="email">Email Address <span>*</span></label>
+      <input id="email" type="email" name="email" required/>
+      <span class="error-message" id="email-error"></span>
+    
+      <p>Query type <span>*</span></p>
+      
+      <div class="query-type">
+        
+          <label for="general-enquiry" class="query-type-options" id="query-type-options" onclick="selectedLabel()">
+            <input id="general-enquiry" type="radio" name="query-type" value="general-enquiry" required />
+            General Enquiry
+          </label>
+
+          <label for="support-request" class="query-type-options" id="query-type-options" onclick="selectedLabel()">
+            <input id="support-request" type="radio" name="query-type" value="support-request" required />
+            Support Request
+          </label>
+
+          <span class="error-message" id="query-type-error"></span>
+      </div>
+
+      <label for="message">Message <span>*</span></label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <span class="error-message" id="message-error"></span>
+
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox" name="checkbox" required/>
+        <label for="checkbox">I consent to being contacted by the team <span>*</span></label>
+      </div>
+      <span class="error-message" id="checkbox-error"></span>
+
+      <button class="submit">Submit</button>
+
+    </form>
+
+    <div class="success-state-message" id="success-state"> 
+      <p class="message-title"><i class="fa-regular fa-circle-check"></i>Message sent!</p>
+      <p class="message-subtitle">Thanks for completing the form, we'll be in touch soon!</p>
+    </div>
+
+  </div>
+
+ <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Samuel Euzébio</a>.
+  </footer> 
+
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/dafebf265a.js" crossorigin="anonymous"></script>
+</body>
+</html>
